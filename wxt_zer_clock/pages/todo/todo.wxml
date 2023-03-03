@@ -1,0 +1,37 @@
+<view class="todo-container">
+
+  <!-- 顶部添加栏 -->
+  <view class="todo-input">
+    <t-input value="{{inputValue}}" style="border-radius: 12rpx;" clearable placeholder="请输入事项名称" confirm-type="done" bind:change="inputChange" bind:blur="isFocus=!isFocus" bind:enter="addTodo" focus="{{isFocus}}">
+      <t-button wx:if="{{inputValue}}" slot="suffix" theme="light" size="small" bindtap="addTodo"> 添加 </t-button>
+    </t-input>
+  </view>
+
+  <!-- 当todo列表存在数据时，渲染该页面 -->
+  <block wx:if="{{todoList.length}}">
+    <view class="todo-control">
+      <image bindtap="toggleAllTodos" src="../../image/pages/all.png"></image>
+      <text wx:if="{{currentUndo}}">待完成任务 {{currentUndo}}</text>
+      <image bindtap="removeTodos" src="../../image/pages/delete.png" wx:if="{{todoList.length>currentUndo}}"></image>
+    </view>
+
+    <view class="todo-itembox">
+      <view class="todo-items {{item.complete?'comp':''}}" wx:for="{{todoList}}" wx:key="index" data-index="{{index}}" bindtap="toggleTodo">
+        <icon class="checkbox" type="{{ item.complete ? 'success' : 'circle' }}"></icon>
+        <text class="title">{{ item.title }}</text>
+        <icon class="remove" type="clear" size="16" catchtap="removeTodo" data-index=" {{index}} " />
+      </view>
+    </view>
+  </block>
+  <!-- 当todo列表为空时，渲染该页面 -->
+  <block wx:else>
+    <view class="todo-empty">
+      <image src="../../image/state/no-data.png"></image>
+      <view style="color: gray;">当前还没有待办事项哦~</view>
+    </view>
+  </block>
+
+  <!-- 回到顶部悬浮按钮 -->
+  <!-- 判断当且仅当列表项多于6个时,才会显示该悬浮按钮 -->
+  <t-fab wx:if="{{todoList.length>6}}" icon="arrow-up" bind:click="fabBack2Top" />
+</view>

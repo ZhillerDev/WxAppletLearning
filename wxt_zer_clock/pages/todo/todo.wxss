@@ -1,0 +1,85 @@
+
+
+.todo-container{
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #ededed;
+
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+}
+
+.todo-input{
+  margin: 12rpx 32rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.todo-empty{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.todo-empty image{
+  width: 450rpx;
+  height:450rpx;
+}
+
+/* 悬浮按钮 */
+.fab{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+/* 多选操纵栏 */
+.todo-control{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 80rpx;
+  margin: 12rpx 32rpx;
+}
+.todo-control image{
+  height: 70rpx;
+  width: 70rpx;
+}
+
+/* todo项目展示 */
+.todo-items{
+  border-radius: 8rpx;
+  height: 120rpx;
+  background-color: white;
+  margin: 10rpx 32rpx;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.comp{
+  background-color: lightgray;
+}
+.todo-items .checkbox{
+  margin-left: 24rpx;
+}
+.todo-items .title{
+  min-width: 70%;
+  max-width: 70%;
+  text-overflow:ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.todo-items .remove{
+  margin-right: 24rpx;
+}
+
+

@@ -1,0 +1,50 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/todo/todo",
+    "pages/datas/datas",
+    "pages/setting/setting"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#EDEDED",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#cdcdcd",
+    "selectedColor": "#000000",
+    "borderStyle": "black",
+    "backgroundColor": "#f7f7f7",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "image/tab/focus.png",
+        "selectedIconPath": "image/tab/focus-hover.png",
+        "text": "专注"
+      },
+
+      {
+        "pagePath": "pages/todo/todo",
+        "iconPath": "image/tab/todo.png",
+        "selectedIconPath": "image/tab/todo-hover.png",
+        "text": "待办"
+      },      
+      {
+        "pagePath": "pages/datas/datas",
+        "iconPath": "image/tab/data.png",
+        "selectedIconPath": "image/tab/data-hover.png",
+        "text": "数据统计"
+      },
+      {
+        "pagePath": "pages/setting/setting",
+        "iconPath": "image/tab/setting.png",
+        "selectedIconPath": "image/tab/setting-hover.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+
+}
