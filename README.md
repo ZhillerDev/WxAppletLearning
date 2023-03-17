@@ -6,3 +6,8 @@
 https://github.com/zhiyiyi/WxAppletLearning/tree/main/wxt_zer_clock
 
 <br>
+
+### Photos
+
+基于 TDesign 的实施地点上报应用，支持上拉加载，事项增删
+https://github.com/zhiyiyi/WxAppletLearning/tree/main/wprj_photo
