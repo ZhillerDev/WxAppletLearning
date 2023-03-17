@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "t-fab": "tdesign-miniprogram/fab/fab",
+    "t-swiper": "tdesign-miniprogram/swiper/swiper",
+    "t-swiper-nav": "tdesign-miniprogram/swiper-nav/swiper-nav"
+  }
+}

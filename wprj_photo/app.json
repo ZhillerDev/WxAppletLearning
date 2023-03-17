@@ -1,0 +1,47 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/user/user",
+    "pages/note/note",
+    "pages/add/add"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "您的位置信息将用于发布现象"
+    }
+  },
+  "requiredPrivateInfos": ["getLocation","chooseLocation"],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#3F72AF",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "selectedColor": "#3F72AF",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "image/tab/home.png",
+        "selectedIconPath": "image/tab/home-hover.png",
+        "text": "主页"
+      },
+      {
+        "pagePath": "pages/note/note",
+        "iconPath": "image/tab/note.png",
+        "selectedIconPath": "image/tab/note-hover.png",
+        "text": "评论"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "iconPath": "image/tab/user.png",
+        "selectedIconPath": "image/tab/user-hover.png",
+        "text": "个人"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

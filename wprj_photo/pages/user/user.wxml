@@ -1,0 +1,26 @@
+
+
+<view class="user-container">
+
+
+  <section class="user">
+    <image src="{{userInfo.avatar}}" mode="cover" class="user-avatar"/>
+    <block wx:if="{{isLogin}}">
+      <view class="unlogin">
+        {{userInfo.userName}}
+      </view>
+    </block>
+    <block wx:else>
+      <view class="unlogin" bindtap="getUserProfile">
+        点击此处登陆
+      </view>
+    </block>
+  </section>
+
+  <section class="btns">
+    <view class="settings" wx:for="{{settingsData}}" wx:key="index" bindtap="switchBinding" data-id="{{item.id}}">
+      <image src="{{item.url}}" mode="cover"/>
+      <view>{{item.title}}</view>
+    </view>
+  </section>
+</view>

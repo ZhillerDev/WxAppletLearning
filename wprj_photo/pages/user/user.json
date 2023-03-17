@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "t-fab": "tdesign-miniprogram/fab/fab",
+    "t-toast": "tdesign-miniprogram/toast/toast"
+  }
+}
