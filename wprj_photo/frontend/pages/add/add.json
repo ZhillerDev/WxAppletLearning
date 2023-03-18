@@ -1,0 +1,15 @@
+{
+  "component": true,
+  "usingComponents": {
+    "t-button": "tdesign-miniprogram/button/button",
+    "t-input": "tdesign-miniprogram/input/input",
+    "t-checkbox": "tdesign-miniprogram/checkbox/checkbox",
+    "t-checkbox-group": "tdesign-miniprogram/checkbox-group/checkbox-group",
+    "t-badge": "tdesign-miniprogram/badge/badge",
+    "t-divider": "tdesign-miniprogram/divider/divider",
+    "t-action-sheet": "tdesign-miniprogram/action-sheet/action-sheet",
+    "t-upload": "tdesign-miniprogram/upload/upload",
+    "t-message": "tdesign-miniprogram/message/message",
+    "t-sticky": "tdesign-miniprogram/sticky/sticky"
+  }
+}

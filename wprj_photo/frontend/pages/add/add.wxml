@@ -1,0 +1,67 @@
+<view class="add-container">
+  <view class="inner">
+
+    <!-- 一些描述性话语 -->
+    <view style="font-weight: bold;font-size: 48rpx;">
+      上报新问题/现象
+    </view>
+    <view style="font-size: 34rpx;color: gray;margin: 20rpx 0 40rpx 0; ">
+      为切实的解决您的问题，请您客观准确的描述现场情况
+    </view>
+
+    <!-- 获取问题描述 -->
+    <section class="evt-info">
+      <view class="content">
+        问题描述 ({{question.length}}/100)
+      </view>
+      <textarea placeholder="在此描述您的需求" bindinput="setQuestion" value="{{question}}" />
+      <!-- <input type="text" placeholder="在此处写下您遇到的问题" class="content" bindinput="setQuestion"/> -->
+    </section>
+
+    <!-- 获取问题类型 -->
+    <section class="evt-type">
+      <view class="content">
+        问题类型
+      </view>
+      <t-checkbox-group t-class="box" borderless bind:change="setQuestionType" style="margin-bottom: 30rpx;" value="{{questionType}}">
+        <t-checkbox class="ck" block="{{false}}" value="c1" label="安全隐患" />
+        <t-checkbox class="ck" block="{{false}}" value="c2" label="不文明现象" />
+        <t-checkbox class="ck" block="{{false}}" value="c3" label="违法停车" />
+        <t-checkbox class="ck" block="{{false}}" value="c4" label="环境卫生" />
+      </t-checkbox-group>
+    </section>
+
+    <!-- 获取事发地点 -->
+    <section class="evt-position">
+      <view class="content">
+        发生地点
+      </view>
+      <block wx:if="{{!position}}">
+        <t-button theme="light" style="margin-bottom: 30rpx;" bindtap="getPosition">获取当前位置</t-button>
+      </block>
+      <block wx:else>
+        <view class="content" style="color: gray; margin-bottom: 30rpx;">
+          {{position}}
+        </view>
+      </block>
+    </section>
+
+    <!-- 上传图片 -->
+    <section class="evt-photos">
+      <view class="content">
+        上传现场图片 ({{originFiles.length}}/5)
+      </view>
+      <t-upload media-type="{{['video','image']}}" files="{{originFiles}}" gridConfig="{{gridConfig}}" bind:success="handleSuccess" bind:remove="handleRemove" bind:click="handleClick" max="5" />
+    </section>
+
+    <!-- 提交与重新填写 -->
+      <section class="evt-submit">
+        <t-button theme="primary" size="large" style="width: 60%;" bindtap="submitAll">提交信息</t-button>
+        <t-button theme="primary" size="large" style="width:32%;" variant="outline" bindtap="resetAll">重新填写</t-button>
+      </section>
+
+  </view>
+</view>
+
+<t-action-sheet id="t-action-sheet" bind:selected="handleSelect"/>
+<t-message id="t-message" />

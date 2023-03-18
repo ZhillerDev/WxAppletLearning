@@ -1,0 +1,28 @@
+<view class="index-container">
+  <view class="card-theme">
+    <t-swiper 
+  current="{{swiperData.current}}"
+  autoplay="true"
+  duration="1000"
+  interval="3000"
+  navigation="{{swiperData.nav}}"
+  list="{{swiperData.list}}"
+  loop="{{false}}"
+  image-props="{{ { shape: 'round' } }}"
+  previousMargin="40px"
+  nextMargin="40px"
+  t-class-nav="card-theme-nav"
+>
+</t-swiper>
+  </view>
+
+  <view class="main-body">
+    <section class="btn-group">
+      <t-button theme="light" icon="app" size="large" class="btn-report" bindtap="addIssue">上报新现象</t-button>
+      <t-button  icon="scan" size="large" class="btn-scan" bindtap="handleScan"></t-button>
+    </section>
+  </view>
+  <t-fab wx:if="{{isFab}}" icon="add" bind:click="addIssue" aria-label="增加"></t-fab>
+</view>
+
+<t-message id="t-message" />

@@ -1,0 +1,14 @@
+system:
+  port: ":10086"
+  db-type: "mysql"
+
+mysql:
+  path: "localhost"
+  port: "3306"
+  config: ""
+  db-name: "wx"
+  username: "root"
+  password: "123456"
+  max-idle-conns: 10
+  max-open-conns: 100
+
